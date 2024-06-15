@@ -1,0 +1,471 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root{
+  --primario: #032E58;
+  --secundario: #CCCCCC;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+}
+/* MAQUETACION */
+.barraUsuario{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 4%;
+  box-sizing: border-box;
+}
+.contenido{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+.vista{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.barraNavegacion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  background: var(--primario, black);
+  color: #d5d8e1;
+}
+.navegacion{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  padding: 0px 5%;
+  background: var(--secundario);
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: var(--primario);
+} 
+/* -------------------------------------- */
+
+.boton{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+  word-wrap: break-word;
+  padding: 5%;
+  box-sizing: border-box;
+  background: inherit;
+  color: inherit;
+}
+.boton:hover{
+  background: #374c72;
+}
+.logo{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.notificaciones{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.datosUsuario{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.datosUsuario > .datos{
+}
+.datosUsuario > .datos > p{
+  margin: 0px;
+}
+.datosUsuario > .usuario{
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  border-radius: 100%;
+}
+/* ----------------------------------------*/
+
+/* estilos generales */
+i{
+  width: 20px;
+  height: 20px;
+  background: #1a1a1a;
+}
+
+/* comprobante */
+.comprobante{
+  float: left;
+  width: 230px;
+  height: 250px;
+  border-radius: 9px;
+  margin: 10px;
+  background: #F5F5F5;
+}
+.comprobante > .cabecera{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.comprobante > .cabecera > .tipo{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.comprobante > .cabecera > .informacion > .numero{
+  font-size: 1.5rem;
+}
+.comprobante > .cabecera > .informacion > .fecha{
+  font-size: 0.7rem;
+}
+.comprobante > .cabecera > .informacion > p{
+  margin: 0px;
+}
+.comprobante > .cuerpo{
+  width: 100%;
+  height: 80%;
+}
+.comprobante > .cuerpo > table{
+  width: 100%;
+  height: 50%;
+  border-collapse: collapse;
+}
+.comprobante > .cuerpo > .glosa{
+  width: 100%;
+  height: 40%;
+  margin: 0px;
+  font-size:  0.9rem;
+  text-align: justify;
+  padding: 4%;
+  box-sizing: border-box;
+}
+/*----------------------*/
+
+/* filtro busqueda */
+.filtroBusqueda{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3% 2%;
+  box-sizing: border-box;
+}
+/* ----------------------*/
+/* comprobante */
+.formatoComprobante{
+  font-size: 1.3rem;
+}
+.cabecera{
+  display: flex;
+  flex-direction: column;
+  padding: 2% 4%;
+}
+.cabecera > .tipo{
+  padding: 2%;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: auto;
+}
+.formatoComprobante > .cabecera > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formatoComprobante > .cabecera > div > div:first-child{
+  width: 80%;
+}
+.nroComprobante{
+  font-size: 2rem;
+}
+.formatoComprobante > .cuerpo{
+  padding: 0px 5%;
+}
+.formatoComprobante > .cuerpo > table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.formatoComprobante > .cuerpo > table .codigo, .fecha{
+  width: 15%;
+}
+.formatoComprobante > .cuerpo > table .debe, .haber{
+  width: 15%;
+  text-align: center;
+}
+.formatoComprobante > .cuerpo > table > tfooter{
+  width: 100%;
+  background: red;
+}
+/* ----------------------*/
+/* doblepartida */
+.cuerpo{
+  padding: 0px 5%;
+}
+.cuerpo > table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* formatomayores */
+.cuerpo > table .fecha, .cuenta, .debe, .haber, .tipo, .dia, .detalle, .debito, .credito, .saldo, .factura, .nit, .razon, .total, .no, .sujeto, .al, .verbal{
+  text-transform: uppercase;
+  background: #CCCCCC;
+}
+.cuerpo > table .tipo,.dia, .debito, .credito, .saldo{
+  width: 10%;
+  text-align:center;
+}
+
+.libroMayor{
+  position: relative;
+  height: 70%;
+  overflow-y: auto;
+}
+.libroMayor > .totalesSaldos{
+  bottom: 0px;
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.libroMayor > .totalesSaldos .totales, .saldos{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.libroMayor > .totalesSaldos .totales > input, .saldos > input{
+  padding: 7px 7px;
+}
+/* compras */
+.libroCompras{
+  position: relative;
+  height: calc(100% - 30%);
+}
+.libroCompras > .totales{
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.libroCompras > .totales input{
+  width: 90%;
+  padding: 4% 3%;
+  border-radius: 9px;
+}
+.libroCompras > .totales label{
+  text-transform: uppercase;
+  width: 20%;
+  overflow: hiden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+
+/* ventas */
+.ventas{
+  width: 100%;
+  height: calc(100% - 15%);
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.ventas > .detallesVenta{
+  width: 50%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.ventas > .detallesVenta > .campoVenta{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+  box-sizing: border-box;
+}
+.ventas > .detallesVenta > .campoVenta > label{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ventas > .detallesVenta > .campoVenta input{
+  width: 150px;
+  padding: 10px;
+}
+.ventas > .detallesVenta > .tiposPago{
+  height: calc(100% - 30%);
+  overflow-y: auto;
+  --fondo: #EEEEEE;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2% 0px;
+  background: var(--fondo);
+  margin-top: 10px;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > label{
+  display: flex;
+  justify-content: space-beetwen;
+  align-items: center;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > label > input, select{
+  width: 50%;
+  margin: auto;
+  padding: 4% 0px;
+  text-align: center;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > button{
+  padding: 10px 20px;
+  background: tomato;
+  border-radius: 9px;
+  border: 0px;
+  color: white;
+}
+.ventas > .detallesVenta > .accionesVenta{
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.ventas > .listadoProductos{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  --fondoTitulo: #3366FF;
+  --fondoProducto: #EEEEEE;
+}
+
+.ventas > .listadoProductos > .busqueda{
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.ventas > .listadoProductos > .busqueda label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 50px;
+}
+.ventas > .listadoProductos > .busqueda input{
+  padding: 10px;
+  border-radius: 9px;
+  width: 80%;
+  border: 1px solid black;
+}
+/* busqueda  | productos > titulo producto | totales*/
+.ventas > .listadoProductos > .productos{
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+}
+.ventas > .listadoProductos > .productos > .titulo{
+  position: sticky;
+  top: 0px;
+  display: flex;
+  background: var(--fondoTitulo);
+  color: white;
+}
+.ventas > .listadoProductos > .productos .accion, .cantidad, .precio, .subtotal{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventas > .listadoProductos > .productos .articulo{
+  width: 50%;
+}
+.ventas > .listadoProductos > .productos > .producto{
+  display: flex;
+  background: var(--fondoProducto);
+  margin-top: 10px;
+}
+.ventas > .listadoProductos > .productos > .producto button{
+  padding: 10% 20px;
+  background: tomato;
+  border: none;
+  border-radius: 9px;
+  color: white;
+}
+.ventas > .listadoProductos > .productos > .producto input{
+  width: 50%;
+  padding: 4% 0px;
+  border-radius: 9px;
+  border: 1px solid black;
+  text-align: center; 
+}
+.ventas > .listadoProductos > .totales{
+  width: 100%;
+  height: 20%;
+  background: white;
+}
+.ventas > .listadoProductos > .totales > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.ventas > .listadoProductos > .totales input{
+  padding: 10px;
+  border-radius: 9px;
+}
+
+
+
+/* estilos generales */
+.btn-grupo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-grupo > button {
+  flex-grow: 1;
+  padding: 15px 0px;
+}

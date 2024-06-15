@@ -1,0 +1,282 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root{
+  --primario: #032E58;
+  --secundario: #CCCCCC;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+}
+/* MAQUETACION */
+.barraUsuario{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 4%;
+  box-sizing: border-box;
+}
+.contenido{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+.vista{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.barraNavegacion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  background: var(--primario, black);
+  color: #d5d8e1;
+}
+.navegacion{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  padding: 0px 5%;
+  background: var(--secundario);
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: var(--primario);
+} 
+/* -------------------------------------- */
+
+.boton{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+  word-wrap: break-word;
+  padding: 5%;
+  box-sizing: border-box;
+  background: inherit;
+  color: inherit;
+}
+.boton:hover{
+  background: #374c72;
+}
+.logo{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.notificaciones{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.datosUsuario{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.datosUsuario > .datos{
+}
+.datosUsuario > .datos > p{
+  margin: 0px;
+}
+.datosUsuario > .usuario{
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  border-radius: 100%;
+}
+/* ----------------------------------------*/
+
+/* estilos generales */
+i{
+  width: 20px;
+  height: 20px;
+  background: #1a1a1a;
+}
+
+/* comprobante */
+.comprobante{
+  float: left;
+  width: 230px;
+  height: 250px;
+  border-radius: 9px;
+  margin: 10px;
+  background: #F5F5F5;
+}
+.comprobante > .cabecera{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.comprobante > .cabecera > .tipo{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.comprobante > .cabecera > .informacion > .numero{
+  font-size: 1.5rem;
+}
+.comprobante > .cabecera > .informacion > .fecha{
+  font-size: 0.7rem;
+}
+.comprobante > .cabecera > .informacion > p{
+  margin: 0px;
+}
+.comprobante > .cuerpo{
+  width: 100%;
+  height: 80%;
+}
+.comprobante > .cuerpo > table{
+  width: 100%;
+  height: 50%;
+  border-collapse: collapse;
+}
+.comprobante > .cuerpo > .glosa{
+  width: 100%;
+  height: 40%;
+  margin: 0px;
+  font-size:  0.9rem;
+  text-align: justify;
+  padding: 4%;
+  box-sizing: border-box;
+}
+/*----------------------*/
+
+/* filtro busqueda */
+.filtroBusqueda{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3% 2%;
+  box-sizing: border-box;
+}
+/* ----------------------*/
+/* comprobante */
+.formatoComprobante{
+  font-size: 1.3rem;
+}
+.cabecera{
+  display: flex;
+  flex-direction: column;
+  padding: 2% 4%;
+}
+.cabecera > .tipo{
+  padding: 2%;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: auto;
+}
+.formatoComprobante > .cabecera > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formatoComprobante > .cabecera > div > div:first-child{
+  width: 80%;
+}
+.nroComprobante{
+  font-size: 2rem;
+}
+.formatoComprobante > .cuerpo{
+  padding: 0px 5%;
+}
+.formatoComprobante > .cuerpo > table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.formatoComprobante > .cuerpo > table .codigo, .cuenta ,.debe ,.haber{
+  background: #CCCCCC;
+}
+.formatoComprobante > .cuerpo > table .codigo, .fecha{
+  width: 15%;
+}
+.formatoComprobante > .cuerpo > table .debe, .haber{
+  width: 15%;
+  text-align: center;
+}
+.formatoComprobante > .cuerpo > table > tfooter{
+  width: 100%;
+  background: red;
+}
+/* ----------------------*/
+/* doblepartida */
+.cuerpo{
+  padding: 0px 5%;
+}
+.cuerpo > table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.cuerpo > table .fecha, .cuenta, .debe, .haber{
+  background: #CCCCCC;
+}
+
+/* formatomayores */
+.cuerpo > table .tipo, .dia, .detalle, .debito, .credito, .saldo{
+  text-transform: uppercase;
+  background: #CCCCCC;
+}
+.cuerpo > table .tipo,.dia, .debito, .credito, .saldo{
+  width: 10%;
+  text-align:center;
+}
+
+.libroMayor{
+  height: 65%;
+  overflow-y: auto;
+  position: relative;
+}
+.libroMayor > .totalesSaldos{
+  bottom: calc(15%/10);
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.libroMayor > .totalesSaldos .totales, .saldos{
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.libroMayor > .totalesSaldos .totales > input, .saldos > input{
+  width: 100px;
+  padding: 3px 3px;
+  background: inherit;
+  border: 1px solid var(--secundario);
+  border-radius: 9px;
+}
