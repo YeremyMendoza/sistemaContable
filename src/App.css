@@ -213,9 +213,6 @@ i{
   width: 100%;
   border-collapse: collapse;
 }
-.formatoComprobante > .cuerpo > table .codigo, .cuenta ,.debe ,.haber{
-  background: #CCCCCC;
-}
 .formatoComprobante > .cuerpo > table .codigo, .fecha{
   width: 15%;
 }
@@ -236,12 +233,9 @@ i{
   width: 100%;
   border-collapse: collapse;
 }
-.cuerpo > table .fecha, .cuenta, .debe, .haber{
-  background: #CCCCCC;
-}
 
 /* formatomayores */
-.cuerpo > table .tipo, .dia, .detalle, .debito, .credito, .saldo{
+.cuerpo > table .fecha, .cuenta, .debe, .haber, .tipo, .dia, .detalle, .debito, .credito, .saldo, .factura, .nit, .razon, .total, .no, .sujeto, .al, .verbal{
   text-transform: uppercase;
   background: #CCCCCC;
 }
@@ -251,12 +245,12 @@ i{
 }
 
 .libroMayor{
-  height: 65%;
-  overflow-y: auto;
   position: relative;
+  height: 70%;
+  overflow-y: auto;
 }
 .libroMayor > .totalesSaldos{
-  bottom: calc(15%/10);
+  bottom: 0px;
   width: 100%;
   height: 15%;
   position: absolute;
@@ -274,9 +268,343 @@ i{
   align-items: center;
 }
 .libroMayor > .totalesSaldos .totales > input, .saldos > input{
-  width: 100px;
-  padding: 3px 3px;
-  background: inherit;
-  border: 1px solid var(--secundario);
+  padding: 7px 7px;
+}
+/* compras */
+.libroCompras{
+  position: relative;
+  height: calc(100% - 30%);
+}
+.libroCompras > .totales{
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+.libroCompras > .totales input{
+  width: 90%;
+  padding: 4% 3%;
   border-radius: 9px;
+}
+.libroCompras > .totales label{
+  text-transform: uppercase;
+  width: 20%;
+  overflow: hiden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+
+/* ventas */
+.ventas{
+  width: 100%;
+  height: calc(100% - 15%);
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.ventas > .detallesVenta{
+  width: 50%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.ventas > .detallesVenta > .campoVenta{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+  box-sizing: border-box;
+}
+.ventas > .detallesVenta > .campoVenta > label{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ventas > .detallesVenta > .campoVenta input{
+  width: 150px;
+  padding: 10px;
+}
+.ventas > .detallesVenta > .tiposPago{
+  height: calc(100% - 30%);
+  overflow-y: auto;
+  --fondo: #EEEEEE;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2% 0px;
+  background: var(--fondo);
+  margin-top: 10px;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > label{
+  display: flex;
+  justify-content: space-beetwen;
+  align-items: center;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > label > input, select{
+  width: 50%;
+  margin: auto;
+  padding: 4% 0px;
+  text-align: center;
+}
+.ventas > .detallesVenta > .tiposPago > .tipoPago > button{
+  padding: 10px 20px;
+  background: tomato;
+  border-radius: 9px;
+  border: 0px;
+  color: white;
+}
+.ventas > .detallesVenta > .accionesVenta{
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.ventas > .listadoProductos{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  --fondoTitulo: #3366FF;
+  --fondoProducto: #EEEEEE;
+}
+
+.ventas > .listadoProductos > .busqueda{
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.ventas > .listadoProductos > .busqueda label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 50px;
+}
+.ventas > .listadoProductos > .busqueda input{
+  padding: 10px;
+  border-radius: 9px;
+  width: 80%;
+  border: 1px solid black;
+}
+/* busqueda  | productos > titulo producto | totales*/
+.ventas > .listadoProductos > .productos{
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+}
+.ventas > .listadoProductos > .productos > .titulo{
+  position: sticky;
+  top: 0px;
+  display: flex;
+  background: var(--fondoTitulo);
+  color: white;
+}
+.ventas > .listadoProductos > .productos .accion, .cantidad, .precio, .subtotal{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventas > .listadoProductos > .productos .articulo{
+  width: 50%;
+}
+.ventas > .listadoProductos > .productos > .producto{
+  display: flex;
+  background: var(--fondoProducto);
+  margin-top: 10px;
+}
+.ventas > .listadoProductos > .productos > .producto button{
+  padding: 10% 20px;
+  background: tomato;
+  border: none;
+  border-radius: 9px;
+  color: white;
+}
+.ventas > .listadoProductos > .productos > .producto input{
+  width: 50%;
+  padding: 4% 0px;
+  border-radius: 9px;
+  border: 1px solid black;
+  text-align: center; 
+}
+.ventas > .listadoProductos > .totales{
+  width: 100%;
+  height: 20%;
+  background: white;
+}
+.ventas > .listadoProductos > .totales > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.ventas > .listadoProductos > .totales input{
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.compras{
+  width: 100%;
+  height: calc(100% - 15%);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  --fondo-producto: #EEEEEE;
+}
+.compras > .datosCompra{
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+.compras > .datosCompra > .campo{
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.compras > .datosCompra > .campo > label{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.compras > .datosCompra > div:nth-child(3) label{
+  width: 100%;
+}
+.compras > .datosCompra > .campo > label > input{
+  padding: 7px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+.compras > .datosCompra > .tiposPago{
+  height: 40%;
+  overflow-y: auto;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background: var(--fondo-producto);
+  margin-top: 10px;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago button{
+  padding: 10px 15px;
+  border-radius: 9px;
+  border: none;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago > label > input{
+  padding: 10px 15px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+
+
+
+.compras > .listaProductos{
+  width: 50%;
+}
+.compras > .listaProductos > .titulo{
+  padding: 20px 20px;
+  background: #3366FF;
+  display: flex;
+  color: white;
+}
+.compras > .listaProductos .accion, .cantidad, .precio, .subtotal{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.compras > .listaProductos .articulo{
+  width: 50%;
+}
+.compras > .listaProductos > .producto{
+  padding: 0px 20px;
+  width: 100%;
+  background: var(--fondo-producto);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.compras > .listaProductos > .producto input{
+  width: 50%;
+  border-radius: 9px;
+  padding: 5px;
+}
+.compras > .listaProductos > .producto button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+}
+
+
+
+
+
+/* estilos generales */
+.btn-grupo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-grupo > button {
+  flex-grow: 1;
+  padding: 15px 0px;
+}
+.c-success{
+  background: #08AD65;
+  color: white;
+}
+
+.w-10{
+  width: 10%;
+}
+.w-20{
+  width: 20%;
+}
+.w-30{
+  width: 30%;
+}
+.w-40{
+  width: 40%;
+}
+.w-50{
+  width: 50%;
+}
+.w-60{
+  width: 60%;
+}
+.w-70{
+  width: 70%;
+}
+.w-80{
+  width: 80%;
+}
+.w-90{
+  width: 90%;
+}
+.w-100{
+  width: 100%;
 }

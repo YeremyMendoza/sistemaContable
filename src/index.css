@@ -456,6 +456,114 @@ i{
   border-radius: 9px;
 }
 
+.compras{
+  width: 100%;
+  height: calc(100% - 15%);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  --fondo-producto: #EEEEEE;
+}
+.compras > .datosCompra{
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+.compras > .datosCompra > .campo{
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.compras > .datosCompra > .campo > label{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.compras > .datosCompra > div:nth-child(3) label{
+  width: 100%;
+}
+.compras > .datosCompra > .campo > label > input{
+  padding: 7px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+.compras > .datosCompra > .tiposPago{
+  height: 40%;
+  overflow-y: auto;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background: var(--fondo-producto);
+  margin-top: 10px;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago > label{
+  display: flex;
+  align-items: center;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago button{
+  padding: 10px 15px;
+  border-radius: 9px;
+  border: none;
+}
+.compras > .datosCompra > .tiposPago > .tipoPago > label > input{
+  padding: 10px 15px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+
+
+
+.compras > .listaProductos{
+  width: 50%;
+}
+.compras > .listaProductos > .titulo{
+  padding: 20px 20px;
+  background: #3366FF;
+  display: flex;
+  color: white;
+}
+.compras > .listaProductos .accion, .cantidad, .precio, .subtotal{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.compras > .listaProductos .articulo{
+  width: 50%;
+}
+.compras > .listaProductos > .producto{
+  padding: 0px 20px;
+  width: 100%;
+  background: var(--fondo-producto);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.compras > .listaProductos > .producto input{
+  width: 50%;
+  border-radius: 9px;
+  padding: 5px;
+}
+.compras > .listaProductos > .producto button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+}
+
+
+
 
 
 /* estilos generales */
@@ -468,4 +576,39 @@ i{
 .btn-grupo > button {
   flex-grow: 1;
   padding: 15px 0px;
+}
+.c-success{
+  background: #08AD65;
+  color: white;
+}
+
+.w-10{
+  width: 10%;
+}
+.w-20{
+  width: 20%;
+}
+.w-30{
+  width: 30%;
+}
+.w-40{
+  width: 40%;
+}
+.w-50{
+  width: 50%;
+}
+.w-60{
+  width: 60%;
+}
+.w-70{
+  width: 70%;
+}
+.w-80{
+  width: 80%;
+}
+.w-90{
+  width: 90%;
+}
+.w-100{
+  width: 100%;
 }

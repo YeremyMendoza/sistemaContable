@@ -7,7 +7,8 @@ import FormatoComprobante from './pages/Contabilidad/FormatoComprobante/FormatoC
 import LibroMayor from './pages/Contabilidad/LibroMayor/LibroMayor';
 import FiltroBusqueda from './components/FiltroBusqueda/FiltroBusqueda';
 import LibroDiario from './pages/Contabilidad/LibroDiario/LibroDiario';
-import Ventas from './pages/Contabilidad/Ventas/Ventas';
+import Ventas from './pages/Comercial/Ventas/Ventas';
+import Compras from './pages/Comercial/Compras/Compras';
 
 export function App(){
   return(
@@ -21,7 +22,8 @@ export function App(){
           {/* <FormatoComprobante /> */}
           {/* <LibroMayor /> */}
           {/* <LibroDiario /> */}
-          <Ventas />
+          {/* <Ventas /> */}
+          <Compras />
         </div>
       </div>
     </>
