@@ -507,10 +507,6 @@ i{
   background: var(--fondo-producto);
   margin-top: 10px;
 }
-.compras > .datosCompra > .tiposPago > .tipoPago > label{
-  display: flex;
-  align-items: center;
-}
 .compras > .datosCompra > .tiposPago > .tipoPago button{
   padding: 10px 15px;
   border-radius: 9px;
@@ -562,6 +558,95 @@ i{
   border-radius: 9px;
 }
 
+/* inventario */
+.inventario{
+  width: 100%;
+  height: 85%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.inventario > .busquedaProducto{
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.inventario > .busquedaProducto input{
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+.inventario > .busquedaProducto button{
+  padding: 10px 40px;
+}
+.inventario > .kardex {
+  margin-top: 10px;
+}
+.inventario > .kardex > table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.inventario > .kardex > table > thead{
+  background: gray; 
+}
+
+/* clientes */
+.clientes{
+  width: 100%;
+  height: 85%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+.clientes > .busquedaCliente{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clientes > .busquedaCliente input, select{
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+.clientes > .busquedaCliente button{
+  padding: 10px 30px;
+}
+.clientes > .listarClientes{
+  width: 100%;
+  height: 80%;
+}
+.clientes > .listarClientes > .titulo{
+  width: 100%;
+  background: #3366FF;
+  padding: 15px 15px;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: uppercase;
+}
+.clientes > .listarClientes .cod, .nit ,.telefono ,.estado{
+  width: 10%;
+  background: inherit;
+}
+.clientes > .listarClientes .nombre{
+  width: 40%;
+}
+.clientes > .listarClientes > .cliente{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  background: #EEEEEE;
+  overflow-y: auto;
+}
+
+
 
 
 
@@ -581,7 +666,10 @@ i{
   background: #08AD65;
   color: white;
 }
-
+button{
+  border:none;
+  border-radius: 9px;
+}
 .w-10{
   width: 10%;
 }

@@ -9,6 +9,10 @@ import FiltroBusqueda from './components/FiltroBusqueda/FiltroBusqueda';
 import LibroDiario from './pages/Contabilidad/LibroDiario/LibroDiario';
 import Ventas from './pages/Comercial/Ventas/Ventas';
 import Compras from './pages/Comercial/Compras/Compras';
+import Clientes from './pages/Comercial/Clientes/Clientes';
+import Comprobantes from './pages/Contabilidad/Comprobantes/Comprobantes';
+
+
 
 export function App(){
   return(
@@ -19,11 +23,13 @@ export function App(){
         <div className="vista">
           <Navegacion />
           {/* <FiltroBusqueda /> */}
+          <Comprobantes />
           {/* <FormatoComprobante /> */}
           {/* <LibroMayor /> */}
           {/* <LibroDiario /> */}
           {/* <Ventas /> */}
-          <Compras />
+          {/* <Compras /> */}
+          {/* <Clientes /> */}
         </div>
       </div>
     </>
